@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177413035-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-177413035-1', { cookie_flags: 'SameSite=None;Secure' });
+    </script>
+    <!-- Google Analytics End -->
+
+    <meta name="description" content="A night market stall.">
+    <meta name="keywords" content="night, market, cloth, robski">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="img/logo_short.jpg" rel="shortcut icon" />
+    <title>Website aiidgnment - Weather</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <script defer src="js/assignment/wscript.js"></script>
+    <link rel="stylesheet" href="css/template/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/template/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/template/owl.carousel.css" />
+    <link rel="stylesheet" href="css/template/style.css" />
+    <link rel="stylesheet" href="css/template/animate.css" />
+
+    <!-- Dark Mode -->
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script>
+        function addDarkmodeWidget() {
+            new Darkmode().showWidget();
+        }
+        window.addEventListener("load", addDarkmodeWidget);
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="app-title">
+            <p>Weather</p>
+        </div>
+        <div class="notification"> </div>
+        <div class="weather_container">
+            <div id="weather_icon">
+                <img src="icons/unknown.png" alt="">
+            </div>
+            <div id="weather_celsius">
+                <p>- °<span>C</span></p>
+            </div>
+            <div id="weather_desc">
+                <p> - </p>
+            </div>
+            <div id="weather_location">
+                <p>-</p>
+            </div>
+            <div>
+                <p>Kindly Remainder : If the weather is rain then our pasar malam will not be opened.</p>
+
+            </div>
+            <div>
+                <a href="index.html"><button class="js-notify-btn">Back To Home</button></a>
+            </div>
+        </div>
+    </div>
+    <script src="js/assignment/weather_notify.js"></script>
+</body>
+
+</html>

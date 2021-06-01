@@ -1,0 +1,79 @@
+<!--
+Copyright 2018 Google Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Set the viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Set character encoding -->
+  <meta charset="utf-8">
+  <!-- Include manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/owl.carousel.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animate.css" />
+
+  <!-- Set title -->
+  <title>Push Notifications</title>
+
+  <!-- Dark Mode -->
+  <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+  <script>
+    function addDarkmodeWidget() {
+      new Darkmode().showWidget();
+    }
+    window.addEventListener("load", addDarkmodeWidget);
+  </script>
+</head>
+
+<body>
+
+  <h1>Push Notification</h1>
+  <button disabled class="js-push-btn">Enable Push Messaging</button>
+  <button><a href="index.html">Back to Main Page</a></button><br><br>
+  <section class="js-sub-endpoint" style="display:none;width:80%">
+    <h3>Subscription Object:</h3>
+    <code class="js-subscription-json"></code><br><br><br>
+    <h3>Endpoint URL:</h3>
+    <code class="js-endpoint-url"></code>
+  </section>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(reg => {
+            console.log('Service worker registered!', reg);
+          })
+          .catch(err => {
+            console.log('Service worker registration failed: ', err);
+          });
+      });
+    }
+    </script>
+    
+  <!-- Include script -->
+  <script src="js/assignment/web_push.js"></script>
+
+
+</body>
+
+</html>

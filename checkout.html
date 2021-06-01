@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177413035-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "UA-177413035-1", {
+      cookie_flags: "SameSite=None;Secure",
+    });
+  </script>
+  <!-- Google Analytics End -->
+  <title>Website assignment - checkout</title>
+  <meta charset="UTF-8" />
+  <meta name="description" content="A night market stall." />
+  <meta name="keywords" content="night, market, cloth, robski" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Web Icon -->
+  <link href="img/logo_short.jpg" rel="shortcut icon" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,500,500i,600,600i,700,700i" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/template/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/template/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/template/owl.carousel.css" />
+  <link rel="stylesheet" href="css/template/style.css" />
+  <link rel="stylesheet" href="css/template/animate.css" />
+
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {},
+      Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"),
+        s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = "https://embed.tawk.to/5f599f05f0e7167d000ef889/default";
+      s1.charset = "UTF-8";
+      s1.setAttribute("crossorigin", "*");
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+  <!--End of Tawk.to Script-->
+  <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+  <script>
+    function addDarkmodeWidget() {
+      new Darkmode().showWidget();
+    }
+    window.addEventListener("load", addDarkmodeWidget);
+  </script>
+
+  <!-- Dark Mode -->
+  <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+  <script>
+    function addDarkmodeWidget() {
+      new Darkmode().showWidget();
+    }
+    window.addEventListener("load", addDarkmodeWidget);
+  </script>
+</head>
+
+<body id="content">
+  <!-- Page Preloder -->
+  <div id="preloder">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Header section -->
+  <header class="header-section header-normal">
+    <div class="container-fluid">
+      <!-- logo -->
+      <div class="site-logo">
+        <img src="img/websitelogo.png" alt="logo" width="160" height="65" />
+      </div>
+      <!-- responsive -->
+      <div class="nav-switch">
+        <i class="fa fa-bars"></i>
+      </div>
+      <!-- site menu -->
+      <ul class="main-menu">
+        <li><a class="text-dark" href="index.html">Home</a></li>
+        <li><a class="text-dark" href="cloth.html">cloth</a></li>
+        <li><a class="text-dark" href="shoe.html">shoe</a></li>
+        <li><a class="text-dark" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+  <!-- Header section end -->
+
+  <!-- Page Info -->
+  <!-- Page Info end -->
+
+  <!-- Page -->
+  <div class="page-area cart-page spad">
+    <div class="container">
+      <form class="checkout-form">
+        <div class="row">
+          <div class="col-lg-6">
+            <h4 class="checkout-title">Billing Address</h4>
+            <div class="row">
+              <div class="col-md-6">
+                <input type="text" placeholder="First Name *" />
+              </div>
+              <div class="col-md-6">
+                <input type="text" placeholder="Last Name *" />
+              </div>
+              <div class="col-md-12">
+                <input type="text" placeholder="Company" />
+                <input value="Malaysia" type="text" placeholder="Country *" />
+                <input type="text" placeholder="Address *" />
+                <input type="text" />
+                <input type="text" placeholder="Zipcode *" />
+                <input type="text" placeholder="City/Town *" />
+                <input type="text" placeholder="Province *" />
+                <input type="text" placeholder="Phone no *" />
+                <input type="email" placeholder="Email Address *" />
+                <div class="checkbox-items"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="order-card">
+              <div class="order-details">
+                <div class="od-warp">
+                  <h4 class="checkout-title">Your order</h4>
+                  <div class="cart-content"></div>
+                  <div>
+                    <table class="order-table">
+                      <thead>
+                        <tr>
+                          <th>Product</th>
+                          <th>price per unit</th>
+                          <th>Total</th>
+                          <th>Quantity</th>
+                        </tr>
+                      </thead>
+                      <tbody id="checkout"></tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="payment-method">
+                  <div class="pm-item">
+                    <p><img src="img/qr.png" alt="paypal" />PAYPAL</p>
+                    <p>
+                      <img src="img/google.png" alt="google form" />Google
+                      Form
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <input class="site-btn btn-full js-notify-btn" type="button" id="getPDF" value="Confirm Order" />
+              </p>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="editor"></div>
+  <!-- Page -->
+
+  <!-- Footer top section -->
+  <section class="footer-top-section home-footer" id="foot">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-8 col-sm-12">
+          <div class="footer-widget about-widget">
+            <img src="img/logo2.png" alt="logo" width="160" height="65" />
+            <p>
+              ROBSKI will give you the best price, fastest shippping and
+              always the best quality of clothing. :)
+            </p>
+            <div class="cards">
+              <img src="img/cards/5.png" alt="" />
+              <img src="img/cards/4.png" alt="" />
+              <img src="img/cards/3.png" alt="" />
+              <img src="img/cards/2.png" alt="" />
+              <img src="img/cards/1.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="footer-widget">
+            <h6 class="fw-title"></h6>
+            <ul>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="footer-widget">
+            <h6 class="fw-title"></h6>
+            <ul>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="footer-widget">
+            <h6 class="fw-title">Main menu</h6>
+            <ul>
+              <li><a href="contact.html">About Us</a></li>
+              <li><a href="categorie.html">Shop</a></li>
+              <li><a href="cloth.html">Cloth</a></li>
+              <li><a href="shoe.html">Shoe</a></li>
+              <li><a href="weather.html">Check the current weather</a></li>
+              <li><a href="map.html">Find Your Location</a></li>
+              <li><a href="admin_login.html">Admin</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="footer-widget">
+            <h6 class="fw-title">Contact</h6>
+            <div class="text-box">
+              <p>ROBSKI PASAR MALAM</p>
+              <p>Kampar Pasar Malam, Every Wednesday</p>
+              <p>012-345678</p>
+              <p>pasarmalam@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer top section end -->
+
+  <!-- Footer section -->
+  <footer class="footer-section">
+    <div class="container">
+      <p class="copyright">
+        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        Copyright &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        All rights reserved | This template is made with
+        <i class="fa fa-heart-o" aria-hidden="true"></i> by
+        <a href="https://colorlib.com" target="_blank">Colorlib</a>
+        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+      </p>
+    </div>
+  </footer>
+  <!-- Footer section end -->
+
+  <!--====== Javascripts & Jquery ======-->
+  <script src="js/template/jquery-3.2.1.min.js"></script>
+  <script src="js/template/bootstrap.min.js"></script>
+  <script src="js/template/owl.carousel.min.js"></script>
+  <script src="js/template/mixitup.min.js"></script>
+  <script src="js/template/sly.min.js"></script>
+  <script src="js/template/jquery.nicescroll.min.js"></script>
+  <script src="js/template/main.js"></script>
+  <script src="js/assignment/cart.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+  <script src="js/assignment/checkout.js"></script>
+  <script src="js/assignment/payment_notify.js"></script>
+</body>
+
+</html>

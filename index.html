@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-177413035-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-177413035-1', { cookie_flags: 'SameSite=None;Secure' });
+	</script>
+	<!-- Google Analytics End -->
+
+	<!-- Add service worker -->
+	<script>
+		if ('serviceWorker' in navigator) {
+			window.addEventListener('load', function () {
+				navigator.serviceWorker.register('/service_worker.js').then(function (registration) {
+					// Registration was successful
+					console.log('ServiceWorker registration successful with scope: ', registration.scope);
+				}, function (err) {
+					// registration failed :(
+					console.log('ServiceWorker registration failed: ', err);
+				});
+			});
+		}
+	</script>
+
+	<title>Website assignment</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="A night market stall.">
+	<meta name="keywords" content="night, market, cloth, robski">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Web Icon -->
+	<link href="img/logo_short.jpg" rel="shortcut icon" />
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/template/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/template/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/template/owl.carousel.css" />
+	<link rel="stylesheet" href="css/template/style.css" />
+	<link rel="stylesheet" href="css/template/animate.css" />
+
+	<!-- Template Scripts -->
+	<script src="js/template/jquery-3.2.1.min.js"></script>
+	<script src="js/template/bootstrap.min.js"></script>
+	<script src="js/template/owl.carousel.min.js"></script>
+	<script src="js/template/mixitup.min.js"></script>
+	<script src="js/template/sly.min.js"></script>
+	<script src="js/template/jquery.nicescroll.min.js"></script>
+
+	<!-- Dark Mode -->
+	<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+	<script>
+		function addDarkmodeWidget() {
+			new Darkmode().showWidget();
+		}
+		window.addEventListener("load", addDarkmodeWidget);
+	</script>
+</head>
+
+<body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Header section -->
+	<header class="header-section">
+		<div class="container-fluid">
+			<!-- logo -->
+			<div class="site-logo">
+				<img src="img/websitelogo.png" alt="logo" width="160" height="65">
+			</div>
+			<!-- responsive -->
+			<div class="nav-switch">
+				<i class="fa fa-bars"></i>
+			</div>
+			<div class="header-right">
+				<a href="web_push.html">
+					<img src="img/bell.png" alt="" width="40" height="40">
+				</a>
+			</div>
+			<!-- site menu -->
+			<ul class="main-menu">
+				<li><a class="text-dark" href="index.html">Home</a></li>
+				<li><a class="text-dark" href="cloth.html">cloth</a></li>
+				<li><a class="text-dark" href="shoe.html">shoe</a></li>
+				<li><a class="text-dark" href="about_us.html">Contact</a></li>
+			</ul>
+		</div>
+	</header>
+	<!-- Header section end -->
+
+
+	<!-- Hero section -->
+	<section class="hero-section set-bg" data-setbg="img/white.jpg">
+		<div class="hero-slider owl-carousel">
+			<div class="hs-item">
+				<div class="hs-left"><img src="img/img3.jpg" alt=""></div>
+				<div class="hs-right">
+					<div class="hs-content">
+						<div class="price">from RM39.99</div>
+						<h2><span>2020</span> <br>Big Discount!!!</h2>
+						<a href="" class="site-btn">Shop NOW!</a>
+					</div>
+				</div>
+			</div>
+			<div class="hs-item">
+				<div class="hs-left"><img src="img/img6.jpg" alt=""></div>
+				<div class="hs-right">
+					<div class="hs-content">
+						<div class="price">from RM19.90</div>
+						<h2><span>Promotion!!</span> <br>Lowest Price in the town!!!</h2>
+						<a href="" class="site-btn">Shop NOW!</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Hero section end -->
+
+
+	<!-- Intro section -->
+	<section class="intro-section spad pb-0">
+		<div class="section-title">
+			<h2>New Arrivals</h2>
+			<p>Best price in the town</p>
+		</div>
+		<div class="intro-slider">
+			<ul class="slidee">
+				<li>
+					<div class="intro-item">
+						<figure>
+							<img src="img/shoe/1crop.jpg" alt="#">
+						</figure>
+						<div class="product-info">
+							<h5>Yellow Shoe</h5>
+							<p>RM399.99</p>
+
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="intro-item">
+						<figure>
+							<img src="img/cloth/2crop.png" alt="#">
+						</figure>
+						<div class="product-info">
+							<h5>Red Dress</h5>
+							<p>RM399.99</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="intro-item">
+						<figure>
+							<img src="img/cloth/4crop.png" alt="#">
+							<div class="bache">SALES</div>
+						</figure>
+						<div class="product-info">
+							<h5>White shirt</h5>
+							<p>RM39.90</p>
+
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="intro-item">
+						<figure>
+							<img src="img/cloth/1.jpg" alt="#">
+						</figure>
+						<div class="product-info">
+							<h5>Yellow Shirt</h5>
+							<p>RM49.99</p>
+
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="intro-item">
+						<figure>
+							<img src="img/shoe/2crop.png" alt="#">
+						</figure>
+						<div class="product-info">
+							<h5>White Shoe</h5>
+							<p>RM319.99</p>
+
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="container">
+			<div class="scrollbar">
+				<div class="handle">
+					<div class="mousearea"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Intro section end -->
+
+
+	<!-- Product section -->
+	<section class="product-section spad">
+		<div class="container">
+			<ul class="product-filter controls">
+				<li class="control" data-filter=".new">New arrivals</li>
+				<li class="control" data-filter="all">Recommended</li>
+				<li class="control" data-filter=".best">Best sellers</li>
+			</ul>
+			<div class="row" id="product-filter">
+				<div class="mix col-lg-3 col-md-6 best">
+					<div class="product-item">
+						<figure>
+							<img src="img/cloth/1.jpg" alt="">
+
+						</figure>
+						<div class="product-info">
+							<h6>Yellow Shirt</h6>
+							<p>RM39.99</p>
+
+						</div>
+					</div>
+				</div>
+				<div class="mix col-lg-3 col-md-6 new">
+					<div class="product-item">
+						<figure>
+							<img src="img/shoe/2crop.png" alt="">
+							<div class="bache">NEW</div>
+
+						</figure>
+						<div class="product-info">
+							<h6>White Shoe</h6>
+							<p>RM399.99</p>
+
+						</div>
+					</div>
+				</div>
+				<div class="mix col-lg-3 col-md-6 best">
+					<div class="product-item">
+						<figure>
+							<img src="img/shoe/4crop.png" alt="">
+
+						</figure>
+						<div class="product-info">
+							<h6>Blue Shoe</h6>
+							<p>RM399.99</p>
+
+						</div>
+					</div>
+				</div>
+				<div class="mix col-lg-3 col-md-6 new best">
+					<div class="product-item">
+						<figure>
+							<img src="img/cloth/4crop.png" alt="">
+							<div class="bache sale">SALE</div>
+
+						</figure>
+						<div class="product-info">
+							<h6>Short Jeans</h6>
+							<p>RM29.90</p>
+
+						</div>
+					</div>
+				</div>
+				<div class="mix col-lg-3 col-md-6 best">
+					<div class="product-item">
+						<figure>
+							<img src="img/shoe/1crop.jpg" alt="">
+							<div class="bache sale">SALES</div>
+
+						</figure>
+						<div class="product-info">
+							<h6>Brown Shoe</h6>
+							<p>RM499.90</p>
+
+						</div>
+					</div>
+				</div>
+				<div class="mix col-lg-3 col-md-6 new">
+					<div class="product-item">
+						<figure>
+							<img src="img/cloth/5crop.png" alt="">
+							<div class="bache">NEW</div>
+
+						</figure>
+						<div class="product-info">
+							<h6>Hype red hoodie</h6>
+							<p>RM69.90</p>
+
+						</div>
+					</div>
+				</div>
+				<div class="mix col-lg-3 col-md-6 best">
+					<div class="product-item">
+						<figure>
+							<img src="img/cloth/2crop.png" alt="">
+
+						</figure>
+						<div class="product-info">
+							<h6>red dress</h6>
+							<p>RM69.90</p>
+
+						</div>
+					</div>
+				</div>
+				<div class="mix col-lg-3 col-md-6 best">
+					<div class="product-item">
+						<figure>
+							<img src="img/shoe/3crop.png" alt="">
+
+						</figure>
+						<div class="product-info">
+							<h6>Street Style Shoe</h6>
+							<p>RM349.90</span></p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Product section end -->
+
+
+
+	<!-- Footer top section -->
+	<section class="footer-top-section home-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-8 col-sm-12">
+					<div class="footer-widget about-widget">
+						<img src="img/logo2.png" alt="logo" width="160" height="65">
+						<p class="pt-5 text-justify">ROBSKI will give you the best price, fastest shippping and always
+							the best quality of
+							clothing. :)</p>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-4 col-sm-6">
+					<div class="footer-widget">
+						<h6 class="fw-title"></h6>
+						<ul>
+							<li><a href="#"></a></li>
+							<li><a href="#"></a></li>
+							<li><a href="#"></a></li>
+							<li><a href="#"></a></li>
+							<li><a href="#"></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-4 col-sm-6">
+					<div class="footer-widget">
+						<h6 class="fw-title"></h6>
+						<ul>
+							<li><a href="#"></a></li>
+							<li><a href="#"></a></li>
+							<li><a href="#"></a></li>
+							<li><a href="#"></a></li>
+							<li><a href="#"></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-4 col-sm-6">
+					<div class="footer-widget">
+						<h6 class="fw-title">Main menu</h6>
+						<ul>
+							<li><a href="about_us.html">About Us</a></li>
+							<li><a href="cloth.html">Cloth</a></li>
+							<li><a href="shoe.html">Shoe</a></li>
+							<li><a href="weather.html">Check the current weather</a></li>
+							<li><a href="map.html">Find Your Location</a></li>
+							<li><a href="admin_login.html">Admin</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-4 col-sm-6">
+					<div class="footer-widget">
+						<h6 class="fw-title">Contact</h6>
+						<div class="text-box">
+							<p>ROBSKI PASAR MALAM </p>
+							<p>Kampar Pasar Malam, Every Wednesday</p>
+							<p>012-345678</p>
+							<p>pasarmalam@gmail.com</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Footer top section end -->
+
+	<!-- Footer section -->
+	<footer class="footer-section">
+		<div class="container">
+			<p class="copyright">
+				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				Copyright &copy;
+				<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made
+				with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com"
+					target="_blank">Colorlib</a>
+				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+			</p>
+		</div>
+	</footer>
+	<!-- Footer section end -->
+
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src="js/template/main.js"></script>
+	<script src="js/assignment/notification.js"></script>
+</body>
+
+</html>
